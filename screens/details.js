@@ -158,7 +158,7 @@ componentWillMount()
     <View style={{height:196,marginVertical:15,width:"100%",backgroundColor:"#ccc",borderRadius:10,overflow:"hidden",justifyContent:"center",alignItems:"center"}}>
     {image != null?<Image source={image} resizeMode="cover" style={{width:"115%",height:"100%"}} />:null}
     <View style={{position:"absolute",width:"100%",padding:20,bottom:0,justifyContent:"center",alignItems:"center",backgroundColor:"background: rgba(0, 0, 0, 0.7)"}}>
-    <Text style={{color:"white",fontSize:24}}>{name}</Text>
+    <Text style={{color:"white",fontSize:24}}> {name}</Text>
     </View>
     </View>
     <Text ellipsizeMode="tail" numberOfLines={4} >{description}</Text>

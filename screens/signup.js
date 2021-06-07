@@ -100,7 +100,7 @@ style={{width,flex:1}}
 <View style={{width,padding:44,flexDirection:"column",alignItems:"center"}}>
 <Image source={require("../images/koffee_name.png")} style={{width:205,height:24,marginTop:30}} />
 <View style={{width,padding:44,minHeight:height-260,flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
-<Text style={[mystyle.titleText,{fontSize:18,alignSelf:"flex-start",marginTop:30,marginBottom:20}]}>Create an Account</Text>
+<Text style={{fontSize:24,alignSelf:"flex-start",marginTop:30,marginBottom:20,fontFamily:"playfairdisplay_bold",color:"#000000"}}>Create an Account</Text>
 <Text style={[mystyle.titleText,{fontSize:12,alignSelf:"flex-start",marginTop:10}]}>Email</Text>
 <View style={mystyle.InputWrp}>
 <TextInput 
