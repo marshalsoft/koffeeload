@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ >
+   <item android:drawable="@drawable/backg" /> 
+    <item
+    android:id="@+id/koffee_name"
+      android:drawable="@drawable/koffee_name"
+      android:width="205dp"
+      android:height="24dp"
+      android:gravity="center"
+     />
+</layer-list>

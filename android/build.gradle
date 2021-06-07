@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "28.0.3"
+        minSdkVersion = 21
+        compileSdkVersion = 28
+        targetSdkVersion = 29
+        supportLibVersion = "28.0.0"
+        googlePlayServicesAuthVersion = "16.0.1"
+        firebaseMessagingVersion = "21.1.0"
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+         maven { url 'https://dl.bintray.com/shodgson/uareu4500reader' }
+         maven { url "https://jitpack.io" }
+         mavenCentral()
+    }
+}
+
+
+// task wrapper(type: Wrapper) {
+//     gradleVersion = '4.4'
+//     distributionUrl = distributionUrl.replace("bin", "all")
+// }
+
+wrapper {
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
