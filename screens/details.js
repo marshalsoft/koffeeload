@@ -49,7 +49,12 @@ componentDidMount() {
   {
   this.props.dispatch({type:"update",data:{recent_views:[...this.props.recent_views,this.props.coffee]}})
  }
- this.setState({...this.props.coffee,toplist:this.props.coffeelist})
+ var qtys = [];
+ for(var i = 0; i < 100;i++)
+ {
+  qtys.push({name:`${i+1}`});
+ }
+ this.setState({...this.props.coffee,toplist:this.props.coffeelist,qtyList:qtys})
 }
 componentWillMount()
 {
@@ -68,12 +73,13 @@ componentWillMount()
       refNo:"",
       toplist:[],
       searchtext:"",
-      searching:false
+      searching:false,
+      qtyList:[]
     }
     
   }
   render() {
-    const {name,description,price,image,refNo,currency,toplist,searching} = this.state
+    const {name,description,price,image,refNo,currency,toplist,searching,qtyList} = this.state
     return(<SafeAreaView  style={[mystyle.container,{width,height,flexDirection:"column"}]} >
     <ScrollView 
      keyboardShouldPersistTaps="handled"
@@ -176,12 +182,7 @@ this.setState({qty:parseInt(d)})
 }}
 selectedValue={String(this.state.qty)}
 >
-{[
-  {name:"1"},
-  {name:"2"},
-  {name:"3"},
-  {name:"4"}
-].map((a,i)=><Picker.Item 
+{qtyList.map((a,i)=><Picker.Item 
   key={i} value={a.name} label={a.name}
    />)}
 </Picker>

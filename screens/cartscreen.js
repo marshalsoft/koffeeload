@@ -132,7 +132,7 @@ onPress={()=>{
      }} style={{padding:10,justifyContent:"center",alignItems:"center"}}>
    <Image source={require("../images/minus_icon.png")} resizeMode="contain" style={{width:18,height:18}} />
 </TouchableOpacity>
-   <View style={[mystyle.InputWrp,{width:40,height:30,borderRadius:2,justifyContent:"center",alignItems:"center"}]}>
+   <View style={{alignSelf:"center",height:30,borderRadius:2,justifyContent:"center",alignItems:"center",backgroundColor:"white",paddingHorizontal:15}}>
      <Text>{item.qty}</Text>
      </View> 
      <TouchableOpacity
